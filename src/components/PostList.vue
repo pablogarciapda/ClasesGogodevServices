@@ -33,7 +33,7 @@
       const posts = service.getPosts()
       return { posts, service }
     },
-    async created() {
+    async mounted() {
       await this.service.fetchAll()
       console.log('El componente ' + this.$options.name + ' ha sido montado.')
     },
